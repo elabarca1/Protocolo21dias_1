@@ -53,8 +53,16 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
     phase: "FASE 2 (Días 8–14)",
     title: "Reprogramación Emocional y Energética",
     days: [
-      { text: "Día 8 – Visualización del “Yo en Paz”", videoLink: "https://youtu.be/ZbXR3dV5Occ" },
-      { text: "Día 9 – Círculo de Protección", videoLink: "https://youtu.be/ldGMGsHigJ4" },
+      { 
+        text: "Día 8 – Visualización del “Yo en Paz”", 
+        videoLink: "https://youtu.be/ZbXR3dV5Occ",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%208%20Protocolo%20de%2021.mp3"
+      },
+      { 
+        text: "Día 9 – Círculo de Protección", 
+        videoLink: "https://youtu.be/ldGMGsHigJ4",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%209%20Protocolo%20de%2021.mp3"
+      },
       { text: "Día 10 – Desprogramación del Estrés Crónico" },
       { text: "Día 11 – Reemplazo Energético" },
       { text: "Día 12 – Respiración del Alma" },

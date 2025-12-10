@@ -17,7 +17,11 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
         videoLink: "https://youtu.be/uA6XOoWwOpg",
         audioLink: "https://caminodebienestar.com/material_21dias/Dia%201%20Protocolo%20de%2021.mp3"
       },
-      { text: "Día 2 – Escaneo Corporal Espiritual", videoLink: "https://youtu.be/McPUDKqUGhc" },
+      { 
+        text: "Día 2 – Escaneo Corporal Espiritual", 
+        videoLink: "https://youtu.be/McPUDKqUGhc", 
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%202%20Protocolo%20de%2021.mp3"
+      },
       { text: "Día 3 – Liberación del Peso Interno", videoLink: "https://youtu.be/NSurBC6mdsY" },
       { text: "Día 4 – Anclaje de Paz", videoLink: "https://youtu.be/-8Yp1SQzYP8" },
       { text: "Día 5 – Expansión del Corazón", videoLink: "https://youtu.be/vgIVAsfeIcw" },

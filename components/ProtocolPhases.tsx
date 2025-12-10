@@ -25,7 +25,7 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
     title: "Reprogramación Emocional y Energética",
     days: [
       { text: "Día 8 – Visualización del “Yo en Paz”", videoLink: "https://youtu.be/ZbXR3dV5Occ" },
-      { text: "Día 9 – Círculo de Protección" },
+      { text: "Día 9 – Círculo de Protección", videoLink: "https://youtu.be/ldGMGsHigJ4" },
       { text: "Día 10 – Desprogramación del Estrés Crónico" },
       { text: "Día 11 – Reemplazo Energético" },
       { text: "Día 12 – Respiración del Alma" },

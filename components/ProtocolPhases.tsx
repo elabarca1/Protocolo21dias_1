@@ -22,11 +22,31 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
         videoLink: "https://youtu.be/McPUDKqUGhc", 
         audioLink: "https://caminodebienestar.com/material_21dias/Dia%202%20Protocolo%20de%2021.mp3"
       },
-      { text: "Día 3 – Liberación del Peso Interno", videoLink: "https://youtu.be/NSurBC6mdsY" },
-      { text: "Día 4 – Anclaje de Paz", videoLink: "https://youtu.be/-8Yp1SQzYP8" },
-      { text: "Día 5 – Expansión del Corazón", videoLink: "https://youtu.be/vgIVAsfeIcw" },
-      { text: "Día 6 – Baño de Luz en Silencio", videoLink: "https://youtu.be/biHoUEu6vsc" },
-      { text: "Día 7 – Ritual de Descanso Profundo", videoLink: "https://youtu.be/_-NtKOAmYFI" },
+      { 
+        text: "Día 3 – Liberación del Peso Interno", 
+        videoLink: "https://youtu.be/NSurBC6mdsY",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%203%20Protocolo%20de%2021.mp3"
+      },
+      { 
+        text: "Día 4 – Anclaje de Paz", 
+        videoLink: "https://youtu.be/-8Yp1SQzYP8",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%204%20Protocolo%20de%2021.mp3"
+      },
+      { 
+        text: "Día 5 – Expansión del Corazón", 
+        videoLink: "https://youtu.be/vgIVAsfeIcw",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%205%20Protocolo%20de%2021.mp3"
+      },
+      { 
+        text: "Día 6 – Baño de Luz en Silencio", 
+        videoLink: "https://youtu.be/biHoUEu6vsc",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%206%20Protocolo%20de%2021.mp3"
+      },
+      { 
+        text: "Día 7 – Ritual de Descanso Profundo", 
+        videoLink: "https://youtu.be/_-NtKOAmYFI",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%207%20Protocolo%20de%2021.mp3"
+      },
     ]
   },
   {

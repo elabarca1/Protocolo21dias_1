@@ -38,7 +38,7 @@ export const Facilitator: React.FC = () => {
                         <p className="text-lg text-slate-600 mb-8">
                             Un experto apasionado por el bienestar integral, dedicado a acompañarte en cada paso de tu transformación.
                         </p>
-                        <ul className="space-y-4">
+                        <ul className="space-y-4 mb-8">
                             {credentials.map((credential, index) => (
                                 <li key={index} className="flex items-start">
                                     <CheckIcon />
@@ -46,6 +46,21 @@ export const Facilitator: React.FC = () => {
                                 </li>
                             ))}
                         </ul>
+                        
+                        <div className="flex justify-center md:justify-start">
+                            <a 
+                                href="https://endyslabarcacoach.netlify.app" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="group relative inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-300 bg-gradient-to-r from-emerald-600 to-teal-500 rounded-full shadow-lg hover:shadow-xl hover:from-emerald-700 hover:to-teal-600 hover:-translate-y-1 focus:outline-none ring-offset-2 focus:ring-2 ring-emerald-400 overflow-hidden"
+                            >
+                                <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
+                                <span className="relative mr-2">Conocer más sobre Endys</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="relative w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

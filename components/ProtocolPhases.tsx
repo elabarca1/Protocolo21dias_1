@@ -63,10 +63,14 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
         videoLink: "https://youtu.be/ldGMGsHigJ4",
         audioLink: "https://caminodebienestar.com/material_21dias/Dia%209%20Protocolo%20de%2021.mp3"
       },
-      { text: "Día 10 – Desprogramación del Estrés Crónico" },
-      { text: "Día 11 – Reemplazo Energético" },
-      { text: "Día 12 – Respiración del Alma" },
-      { text: "Día 13 – Reencuentro con tu Centro" },
+      { 
+        text: "Día 10 – Desprogramación del Estrés Crónico",
+        videoLink: "https://youtu.be/18n3fbIUbBc",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2010%20Protocolo%20de%2021.mp3"
+      },
+      { text: "Día 11 – Sanación del Niño 1" },
+      { text: "Día 12 – Sanación del Niño 2" },
+      { text: "Día 13 – Sanación del Niño 3" },
       { text: "Día 14 – Ritual de Renacimiento" },
     ]
   },

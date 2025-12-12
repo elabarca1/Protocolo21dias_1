@@ -70,6 +70,7 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
       },
       { 
         text: "Día 11 – Sanación del Niño 1",
+        videoLink: "https://youtu.be/IqV_6izJwgs",
         audioLink: "https://caminodebienestar.com/material_21dias/Dia%2011%20Protocolo%20de%2021.mp3"
       },
       { text: "Día 12 – Sanación del Niño 2" },

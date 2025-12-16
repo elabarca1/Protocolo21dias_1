@@ -83,7 +83,11 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
         videoLink: "https://youtu.be/MNOjcIZSf3E",
         audioLink: "https://caminodebienestar.com/material_21dias/Dia%2013%20Protocolo%20de%2021.mp3"
       },
-      { text: "Día 14 – Ritual de Renacimiento" },
+      { 
+        text: "Día 14 – Ritual de Renacimiento",
+        videoLink: "https://youtu.be/N3x5bR6zgRU",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2014%20Protocolo%20de%2021.mp3"
+      },
     ]
   },
   {

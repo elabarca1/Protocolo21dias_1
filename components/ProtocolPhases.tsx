@@ -94,7 +94,11 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
     phase: "FASE 3 (Días 15–21)",
     title: "Expansión Interior y Consolidación de la Paz",
     days: [
-      { text: "Día 15 – Fusión con el Silencio" },
+      { 
+        text: "Día 15 – Fusión con el Silencio",
+        videoLink: "https://youtu.be/-T3Chf1UqSI",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2015%20Protocolo%20de%2021.mp3"
+      },
       { text: "Día 16 – Activación del “Yo Superior”" },
       { text: "Día 17 – Conexión con la Naturaleza" },
       { text: "Día 18 – Meditación del Corazón Luminoso" },

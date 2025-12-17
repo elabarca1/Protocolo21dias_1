@@ -24,9 +24,9 @@ export const Facilitator: React.FC = () => {
                 <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                     <div className="flex justify-center">
                         <img 
-                            src="https://caminodebienestar.com/imagenes/EndysLabarca2.png" 
+                            src="https://caminodebienestar.com/imagenes/Perfil%20Endys%20AI%201.png" 
                             alt="Foto del facilitador Endys Labarca" 
-                            className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-2xl border-4 border-white"
+                            className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover object-top shadow-2xl border-4 border-white"
                         />
                     </div>
                     <div className="text-center md:text-left">

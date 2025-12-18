@@ -99,7 +99,11 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
         videoLink: "https://youtu.be/-T3Chf1UqSI",
         audioLink: "https://caminodebienestar.com/material_21dias/Dia%2015%20Protocolo%20de%2021.mp3"
       },
-      { text: "Día 16 – Activación del “Yo Superior”" },
+      { 
+        text: "Día 16 – Activación del “Yo Superior”",
+        videoLink: "https://youtu.be/zJUHZWXro1g",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2016%20Protocolo%20de%2021.mp3"
+      },
       { text: "Día 17 – Conexión con la Naturaleza" },
       { text: "Día 18 – Meditación del Corazón Luminoso" },
       { text: "Día 19 – Gratitud Profunda" },

@@ -104,7 +104,11 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
         videoLink: "https://youtu.be/zJUHZWXro1g",
         audioLink: "https://caminodebienestar.com/material_21dias/Dia%2016%20Protocolo%20de%2021.mp3"
       },
-      { text: "Día 17 – Conexión con la Naturaleza" },
+      { 
+        text: "Día 17 – Conexión con la Naturaleza",
+        videoLink: "https://youtu.be/9yPhVrMznY0",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2017%20Protocolo%20de%2021.mp3"
+      },
       { text: "Día 18 – Meditación del Corazón Luminoso" },
       { text: "Día 19 – Gratitud Profunda" },
       { text: "Día 20 – Integración Final" },

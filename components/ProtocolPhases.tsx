@@ -109,7 +109,11 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
         videoLink: "https://youtu.be/9yPhVrMznY0",
         audioLink: "https://caminodebienestar.com/material_21dias/Dia%2017%20Protocolo%20de%2021.mp3"
       },
-      { text: "Día 18 – Meditación del Corazón Luminoso" },
+      { 
+        text: "Día 18 – Activación de la Intuición",
+        videoLink: "https://youtu.be/71OJKnN3vFM",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2018%20Protocolo%20de%2021.mp3"
+      },
       { text: "Día 19 – Gratitud Profunda" },
       { text: "Día 20 – Integración Final" },
       { text: "Día 21 – Ritual de Coronación Espiritual" },

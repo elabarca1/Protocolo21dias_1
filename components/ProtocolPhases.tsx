@@ -114,9 +114,13 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
         videoLink: "https://youtu.be/71OJKnN3vFM",
         audioLink: "https://caminodebienestar.com/material_21dias/Dia%2018%20Protocolo%20de%2021.mp3"
       },
-      { text: "Día 19 – Gratitud Profunda" },
-      { text: "Día 20 – Integración Final" },
-      { text: "Día 21 – Ritual de Coronación Espiritual" },
+      { 
+        text: "Día 19 – Soltar Lo Que No Puedo Controlar",
+        videoLink: "https://youtu.be/vxhOuBkTOG8",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2019%20Protocolo%20de%2021.mp3"
+      },
+      { text: "Día 20 – Gratitud Profunda" },
+      { text: "Día 21 – Integración Final" },
     ]
   }
 ];

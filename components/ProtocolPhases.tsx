@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 interface DayItem {
@@ -64,37 +63,44 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
       { 
         text: "Día 8 – Visualización del “Yo en Paz”", 
         videoLink: "https://youtu.be/ZbXR3dV5Occ",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%208%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%208%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%208.docx"
       },
       { 
         text: "Día 9 – Círculo de Protección", 
         videoLink: "https://youtu.be/ldGMGsHigJ4",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%209%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%209%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%209.docx"
       },
       { 
         text: "Día 10 – Desprogramación del Estrés Crónico",
         videoLink: "https://youtu.be/18n3fbIUbBc",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2010%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2010%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%2010.docx"
       },
       { 
         text: "Día 11 – Sanación del Niño 1",
         videoLink: "https://youtu.be/IqV_6izJwgs",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2011%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2011%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%2011.docx"
       },
       { 
         text: "Día 12 – Sanación del Niño 2",
         videoLink: "https://youtu.be/gRc3ZEeKX9U",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2012%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2012%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%2012.docx"
       },
       { 
         text: "Día 13 – Sanación del Niño 3",
         videoLink: "https://youtu.be/MNOjcIZSf3E",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2013%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2013%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%2013.docx"
       },
       { 
         text: "Día 14 – Ritual de Renacimiento",
         videoLink: "https://youtu.be/N3x5bR6zgRU",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2014%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2014%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%2014.docx"
       },
     ]
   },
@@ -105,32 +111,38 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
       { 
         text: "Día 15 – Fusión con el Silencio",
         videoLink: "https://youtu.be/-T3Chf1UqSI",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2015%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2015%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%2015.docx"
       },
       { 
         text: "Día 16 – Activación del “Yo Superior”",
         videoLink: "https://youtu.be/zJUHZWXro1g",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2016%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2016%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%2016.docx"
       },
       { 
         text: "Día 17 – Conexión con la Naturaleza",
         videoLink: "https://youtu.be/9yPhVrMznY0",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2017%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2017%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%2017.docx"
       },
       { 
         text: "Día 18 – Activación de la Intuición",
         videoLink: "https://youtu.be/71OJKnN3vFM",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2018%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2018%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%2018.docx"
       },
       { 
         text: "Día 19 – Soltar Lo Que No Puedo Controlar",
         videoLink: "https://youtu.be/vxhOuBkTOG8",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2019%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2019%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%2019.docx"
       },
       { 
         text: "Día 20 – Gratitud Profunda",
         videoLink: "https://youtu.be/tGNGiPCEEog",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2020%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2020%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%2020.docx"
       },
       { text: "Día 21 – Integración Final" },
     ]
@@ -148,19 +160,19 @@ const DayRow: React.FC<{ day: DayItem }> = ({ day }) => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                     {(day.videoLink || day.audioLink || day.resourceLink) ? (
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 p-3 bg-slate-50 rounded-lg border border-slate-100 hover:border-emerald-200 transition-colors">
-                            <span className="font-medium text-slate-800">{day.text}</span>
-                            <div className="flex flex-wrap gap-2">
+                            <span className="font-medium text-slate-800 truncate pr-2">{day.text}</span>
+                            <div className="flex flex-nowrap items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 md:pb-0">
                                 {day.videoLink && (
                                     <a
                                         href={day.videoLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg w-full sm:w-auto"
+                                        className="inline-flex items-center justify-center px-3 py-1.5 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white text-[10px] font-bold uppercase tracking-wider rounded-full transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md flex-shrink-0"
                                     >
-                                        <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <svg className="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                                         </svg>
                                         VIDEO
@@ -169,9 +181,9 @@ const DayRow: React.FC<{ day: DayItem }> = ({ day }) => {
                                 {day.audioLink && (
                                     <button
                                         onClick={() => setShowAudioPlayer(!showAudioPlayer)}
-                                        className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg w-full sm:w-auto cursor-pointer"
+                                        className="inline-flex items-center justify-center px-3 py-1.5 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white text-[10px] font-bold uppercase tracking-wider rounded-full transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md flex-shrink-0 cursor-pointer"
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             {showAudioPlayer ? (
                                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                                             ) : (
@@ -186,9 +198,9 @@ const DayRow: React.FC<{ day: DayItem }> = ({ day }) => {
                                         href={day.resourceLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg w-full sm:w-auto"
+                                        className="inline-flex items-center justify-center px-3 py-1.5 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white text-[10px] font-bold uppercase tracking-wider rounded-full transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md flex-shrink-0"
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                         </svg>
                                         RECURSO
@@ -248,7 +260,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ phase, title, days, isOpe
                     </svg>
                 </span>
             </button>
-            <div className={`transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
+            <div className={`transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="p-5 border-t border-slate-200 bg-white">
                     <ul className="space-y-4 text-slate-600">
                         {days.map((day, index) => (
@@ -277,7 +289,7 @@ export const ProtocolPhases: React.FC = () => {
                         Un viaje estructurado en tres fases para desprogramar el estrés, reprogramar tu energía y expandir tu conciencia.
                     </p>
                 </div>
-                <div className="max-w-3xl mx-auto">
+                <div className="max-w-4xl mx-auto">
                     {protocolData.map((item, index) => (
                         <AccordionItem
                             key={index}
@@ -288,6 +300,15 @@ export const ProtocolPhases: React.FC = () => {
                     ))}
                 </div>
             </div>
+            <style dangerouslySetInnerHTML={{ __html: `
+                .no-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+                .no-scrollbar {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+            ` }} />
         </section>
     );
 };

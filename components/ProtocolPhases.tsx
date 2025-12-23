@@ -119,7 +119,11 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
         videoLink: "https://youtu.be/vxhOuBkTOG8",
         audioLink: "https://caminodebienestar.com/material_21dias/Dia%2019%20Protocolo%20de%2021.mp3"
       },
-      { text: "Día 20 – Gratitud Profunda" },
+      { 
+        text: "Día 20 – Gratitud Profunda",
+        videoLink: "https://youtu.be/tGNGiPCEEog",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2020%20Protocolo%20de%2021.mp3"
+      },
       { text: "Día 21 – Integración Final" },
     ]
   }

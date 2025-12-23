@@ -5,6 +5,7 @@ interface DayItem {
   text: string;
   videoLink?: string;
   audioLink?: string;
+  resourceLink?: string;
 }
 
 const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
@@ -15,37 +16,44 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
       { 
         text: "Día 1 – Respiración Fundacional", 
         videoLink: "https://youtu.be/uA6XOoWwOpg",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%201%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%201%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%201.docx"
       },
       { 
         text: "Día 2 – Escaneo Corporal Espiritual", 
         videoLink: "https://youtu.be/McPUDKqUGhc", 
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%202%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%202%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%202.docx"
       },
       { 
         text: "Día 3 – Liberación del Peso Interno", 
         videoLink: "https://youtu.be/NSurBC6mdsY",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%203%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%203%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%203.docx"
       },
       { 
         text: "Día 4 – Anclaje de Paz", 
         videoLink: "https://youtu.be/-8Yp1SQzYP8",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%204%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%204%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%204.docx"
       },
       { 
         text: "Día 5 – Expansión del Corazón", 
         videoLink: "https://youtu.be/vgIVAsfeIcw",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%205%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%205%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%205.docx"
       },
       { 
         text: "Día 6 – Baño de Luz en Silencio", 
         videoLink: "https://youtu.be/biHoUEu6vsc",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%206%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%206%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%206.docx"
       },
       { 
         text: "Día 7 – Ritual de Descanso Profundo", 
         videoLink: "https://youtu.be/_-NtKOAmYFI",
-        audioLink: "https://caminodebienestar.com/material_21dias/Dia%207%20Protocolo%20de%2021.mp3"
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%207%20Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%207.docx"
       },
     ]
   },
@@ -141,10 +149,10 @@ const DayRow: React.FC<{ day: DayItem }> = ({ day }) => {
                 </svg>
                 
                 <div className="flex-1">
-                    {(day.videoLink || day.audioLink) ? (
+                    {(day.videoLink || day.audioLink || day.resourceLink) ? (
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 p-3 bg-slate-50 rounded-lg border border-slate-100 hover:border-emerald-200 transition-colors">
                             <span className="font-medium text-slate-800">{day.text}</span>
-                            <div className="flex flex-col sm:flex-row gap-2">
+                            <div className="flex flex-wrap gap-2">
                                 {day.videoLink && (
                                     <a
                                         href={day.videoLink}
@@ -172,6 +180,19 @@ const DayRow: React.FC<{ day: DayItem }> = ({ day }) => {
                                         </svg>
                                         {showAudioPlayer ? 'CERRAR' : 'AUDIO'}
                                     </button>
+                                )}
+                                {day.resourceLink && (
+                                    <a
+                                        href={day.resourceLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg w-full sm:w-auto"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                        </svg>
+                                        RECURSO
+                                    </a>
                                 )}
                             </div>
                         </div>

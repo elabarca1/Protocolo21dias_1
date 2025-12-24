@@ -148,7 +148,7 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
         text: "Día 21 – Integración Final",
         videoLink: "https://youtu.be/OMTtNtVytZA",
         audioLink: "https://caminodebienestar.com/material_21dias/Dia%2020%21Protocolo%20de%2021.mp3",
-        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%21dia%2021.docx"
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%2021.docx"
       },
     ]
   }

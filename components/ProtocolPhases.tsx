@@ -144,35 +144,38 @@ const protocolData: { phase: string; title: string; days: DayItem[] }[] = [
         audioLink: "https://caminodebienestar.com/material_21dias/Dia%2020%20Protocolo%20de%2021.mp3",
         resourceLink: "https://caminodebienestar.com/material_21dias/recursos%20dia%2020.docx"
       },
-      { text: "Día 21 – Integración Final" },
+      { 
+        text: "Día 21 – Integración Final",
+        videoLink: "https://youtu.be/OMTtNtVytZA",
+        audioLink: "https://caminodebienestar.com/material_21dias/Dia%2020%21Protocolo%20de%2021.mp3",
+        resourceLink: "https://caminodebienestar.com/material_21dias/recursos%21dia%202.docx"
+      },
     ]
   }
 ];
 
-// Componente individual para manejar el estado del reproductor de audio por día
 const DayRow: React.FC<{ day: DayItem }> = ({ day }) => {
     const [showAudioPlayer, setShowAudioPlayer] = useState(false);
 
     return (
         <li className="flex flex-col border-b border-slate-100 last:border-0 pb-4 last:pb-0">
-            <div className="flex items-start mt-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 mt-1 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                
-                <div className="flex-1 min-w-0">
+            <div className="flex flex-col items-center">
+                <div className="w-full">
                     {(day.videoLink || day.audioLink || day.resourceLink) ? (
-                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 p-3 bg-slate-50 rounded-lg border border-slate-100 hover:border-emerald-200 transition-colors">
-                            <span className="font-medium text-slate-800 truncate pr-2">{day.text}</span>
-                            <div className="flex flex-nowrap items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 md:pb-0">
+                        <div className="flex flex-col items-center text-center gap-4 p-4 md:p-5 bg-slate-50/50 rounded-[1.5rem] border border-slate-100 hover:border-emerald-200 hover:bg-emerald-50/30 transition-all duration-300 group shadow-sm">
+                            <span className="font-bold text-slate-800 text-base md:text-lg leading-tight group-hover:text-emerald-800 transition-colors">
+                                {day.text}
+                            </span>
+                            
+                            <div className="flex flex-wrap justify-center items-center gap-3 w-full">
                                 {day.videoLink && (
                                     <a
                                         href={day.videoLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center px-3 py-1.5 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white text-[10px] font-bold uppercase tracking-wider rounded-full transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md flex-shrink-0"
+                                        className="inline-flex items-center justify-center min-w-[90px] px-4 py-2 bg-gradient-to-r from-red-600 to-rose-500 hover:from-red-700 hover:to-rose-600 text-white text-[9px] font-black uppercase tracking-[0.12em] rounded-xl transition-all duration-300 transform active:scale-95 shadow-md"
                                     >
-                                        <svg className="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <svg className="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                                         </svg>
                                         VIDEO
@@ -181,13 +184,13 @@ const DayRow: React.FC<{ day: DayItem }> = ({ day }) => {
                                 {day.audioLink && (
                                     <button
                                         onClick={() => setShowAudioPlayer(!showAudioPlayer)}
-                                        className="inline-flex items-center justify-center px-3 py-1.5 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white text-[10px] font-bold uppercase tracking-wider rounded-full transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md flex-shrink-0 cursor-pointer"
+                                        className={`inline-flex items-center justify-center min-w-[90px] px-4 py-2 transition-all duration-300 transform active:scale-95 shadow-md rounded-xl text-[9px] font-black uppercase tracking-[0.12em] text-white ${showAudioPlayer ? 'bg-slate-700 shadow-inner' : 'bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700'}`}
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             {showAudioPlayer ? (
-                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                                             ) : (
-                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
                                             )}
                                         </svg>
                                         {showAudioPlayer ? 'CERRAR' : 'AUDIO'}
@@ -198,10 +201,10 @@ const DayRow: React.FC<{ day: DayItem }> = ({ day }) => {
                                         href={day.resourceLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center px-3 py-1.5 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white text-[10px] font-bold uppercase tracking-wider rounded-full transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md flex-shrink-0"
+                                        className="inline-flex items-center justify-center min-w-[90px] px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white text-[9px] font-black uppercase tracking-[0.12em] rounded-xl transition-all duration-300 transform active:scale-95 shadow-md"
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                         </svg>
                                         RECURSO
                                     </a>
@@ -209,16 +212,22 @@ const DayRow: React.FC<{ day: DayItem }> = ({ day }) => {
                             </div>
                         </div>
                     ) : (
-                        <span className="block py-1">{day.text}</span>
+                        <div className="flex flex-col items-center text-center p-4 bg-emerald-50/30 rounded-[1.5rem] border border-emerald-100">
+                             <span className="font-bold text-slate-700 text-base">
+                                {day.text}
+                            </span>
+                            <span className="text-[9px] text-emerald-600 font-black mt-1.5 uppercase tracking-[0.2em]">Contenido Próximamente</span>
+                        </div>
                     )}
                 </div>
             </div>
 
-            {/* Reproductor de Audio Desplegable */}
             {day.audioLink && showAudioPlayer && (
-                <div className="mt-3 pl-8 pr-2 animate-fadeIn w-full">
-                    <div className="bg-sky-50 border border-sky-100 rounded-lg p-3 shadow-inner">
-                        <p className="text-xs text-sky-700 mb-2 font-semibold text-center uppercase tracking-wide">Reproductor de Meditación</p>
+                <div className="mt-3 w-full max-w-xl mx-auto animate-fadeIn">
+                    <div className="bg-sky-50 border border-sky-100 rounded-[1rem] p-3 shadow-inner">
+                        <div className="flex items-center justify-center mb-2">
+                           <p className="text-[9px] text-sky-700 font-black mx-3 uppercase tracking-[0.2em]">Meditación Activa</p>
+                        </div>
                         <audio 
                             controls 
                             controlsList="nodownload" 
@@ -245,24 +254,28 @@ interface AccordionItemProps {
 
 const AccordionItem: React.FC<AccordionItemProps> = ({ phase, title, days, isOpen, onClick }) => {
     return (
-        <div className="border border-slate-200 rounded-lg overflow-hidden mb-4 bg-white shadow-sm">
+        <div className="border border-slate-200 rounded-[1.25rem] overflow-hidden mb-5 bg-white shadow-sm hover:shadow-lg transition-all duration-700">
             <button
                 onClick={onClick}
-                className="w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 bg-slate-50 hover:bg-slate-100 transition duration-300"
+                className={`w-full flex justify-between items-center p-5 md:p-6 text-left transition-all duration-700 ${isOpen ? 'bg-emerald-600 text-white' : 'bg-white hover:bg-slate-50'}`}
             >
-                <div>
-                    <span className="text-emerald-600 block text-sm font-bold uppercase tracking-wide">{phase}</span>
-                    <span className="text-lg">{title}</span>
+                <div className="pr-4 flex-1 min-w-0">
+                    <span className={`block text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] mb-1 ${isOpen ? 'text-emerald-100' : 'text-emerald-600'}`}>
+                        {phase}
+                    </span>
+                    <span className={`block text-sm md:text-base lg:text-lg font-bold leading-tight whitespace-nowrap overflow-hidden text-ellipsis ${isOpen ? 'text-white' : 'text-slate-800'}`}>
+                        {title}
+                    </span>
                 </div>
-                <span className={`transform transition-transform duration-300 text-emerald-500 ${isOpen ? 'rotate-180' : ''}`}>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <span className={`flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-[0.6rem] shadow-md transform transition-all duration-700 ${isOpen ? 'bg-white/20 rotate-180 text-white' : 'bg-emerald-50 text-emerald-600 border border-emerald-100'}`}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
                     </svg>
                 </span>
             </button>
-            <div className={`transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                <div className="p-5 border-t border-slate-200 bg-white">
-                    <ul className="space-y-4 text-slate-600">
+            <div className={`transition-all duration-1000 ease-in-out ${isOpen ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+                <div className="p-5 md:p-7 bg-white border-t border-slate-100">
+                    <ul className="space-y-4">
                         {days.map((day, index) => (
                             <DayRow key={index} day={day} />
                         ))}
@@ -281,12 +294,17 @@ export const ProtocolPhases: React.FC = () => {
     };
 
     return (
-        <section className="py-16">
+        <section className="py-16 bg-gradient-to-b from-transparent via-emerald-50/5 to-transparent">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-800">El Camino de 21 Días hacia tu Paz Interior</h2>
-                    <p className="text-lg text-slate-600 mt-4 max-w-3xl mx-auto">
-                        Un viaje estructurado en tres fases para desprogramar el estrés, reprogramar tu energía y expandir tu conciencia.
+                <div className="text-center mb-10">
+                    <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tighter mb-4">Ruta del Renacer</h2>
+                    <div className="flex items-center justify-center gap-2 mb-4">
+                        <div className="h-1 w-8 bg-emerald-500 rounded-full"></div>
+                        <div className="h-1 w-1 bg-emerald-400 rounded-full"></div>
+                        <div className="h-1 w-1 bg-emerald-300 rounded-full"></div>
+                    </div>
+                    <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed font-medium">
+                        Un sistema progresivo diseñado para transformar profundamente tu bienestar.
                     </p>
                 </div>
                 <div className="max-w-4xl mx-auto">
@@ -301,12 +319,12 @@ export const ProtocolPhases: React.FC = () => {
                 </div>
             </div>
             <style dangerouslySetInnerHTML={{ __html: `
-                .no-scrollbar::-webkit-scrollbar {
-                    display: none;
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(-5px); }
+                    to { opacity: 1; transform: translateY(0); }
                 }
-                .no-scrollbar {
-                    -ms-overflow-style: none;
-                    scrollbar-width: none;
+                .animate-fadeIn {
+                    animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
                 }
             ` }} />
         </section>

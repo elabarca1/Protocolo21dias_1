@@ -28,12 +28,12 @@ export const Schedule: React.FC = () => {
 
     const buildGoogleCalendarLink = () => {
         const title = "Protocolo de 21 Días de Relajación y Sanación";
-        // NOTE: Hardcoded to the next occurrence of "Lunes, 1 de Diciembre", which is Dec 2, 2024.
-        // Start time is 6 AM Lima time (UTC-5), which is 11:00 UTC.
-        const startDate = "20241202T110000Z";
-        const endDate = "20241202T111500Z";
+        // Actualizado al Lunes 2 de Febrero de 2026.
+        // Hora de inicio: 6 AM Lima (UTC-5), que corresponde a las 11:00 UTC.
+        const startDate = "20260202T110000Z";
+        const endDate = "20260202T111500Z";
         const description = `¡Prepárate para tu viaje de transformación! Dedica 15 minutos diarios para encontrar paz, claridad y energía.\n\nÚnete a la comunidad en WhatsApp: https://chat.whatsapp.com/EjHfSRo1FOQCQSoJxsOBRl`;
-        // Repeats daily for 21 days.
+        // Se repite diariamente por 21 días.
         const recurrence = "RRULE:FREQ=DAILY;COUNT=21";
 
         const params = new URLSearchParams({
@@ -65,8 +65,8 @@ export const Schedule: React.FC = () => {
                             </div>
                             <div>
                                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Inicio y Frecuencia</h3>
-                                <p className="text-slate-600 text-lg"><strong>INICIO:</strong> Lunes 1 de Diciembre</p>
-                                <p className="text-slate-600 text-lg">Lunes a sábado.</p>
+                                <p className="text-slate-600 text-lg"><strong>INICIO:</strong> Lunes 2 de Febrero de 2026</p>
+                                <p className="text-slate-600 text-lg">21 días de práctica continua.</p>
                             </div>
                         </div>
 
